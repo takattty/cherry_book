@@ -11,7 +11,7 @@ x = nil
 special_price = 200
 
 #キャメルケース（＝詰める記法）では書かない。
-spwcialprice = 200
+spwcialPrice = 200
 
 #あまり使われない_で始めるケース
 _special_price = 200
