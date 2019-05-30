@@ -29,3 +29,16 @@ puts s4.to_i #=>return 4
 
 s = "-1.2e-3"
 puts s.to_f
+
+#文字列に数値を直接連結は不可能。to_sメソッドを使って数値を文字列に変換する必要がある。
+
+num = 3
+
+#puts 'Number is' + num#=>エラーで怒られます。
+#Traceback (most recent call last):
+#    1: from 2.4.3.rb:36:in `<main>'
+#2.4.3.rb:36:in `+': no implicit conversion of Integer into String (TypeError)
+
+puts 'Number is' + num.to_s
+
+puts "Number is #{num}"
