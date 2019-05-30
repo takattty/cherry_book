@@ -5,7 +5,7 @@ puts 'ruby' != 'perl'
 puts 'ruby' != 'ruby'
 
 #大小関係の比較。文字コードが大小比較の基準。
-puts 'a' < 'A'
-puts 'a' > 'A'
+puts 'a' < 'A' #=>false
+puts 'a' > 'A' #=>true
 puts 'takatty' < 'taka' #=>false
 puts 'takatty' > 'taka' #=>true
