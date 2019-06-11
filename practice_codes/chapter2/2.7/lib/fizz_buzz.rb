@@ -68,3 +68,17 @@ for i in 1..30
 end
 
 puts (i.to_s.class) #=>stringって出たからちゃんとこの処理で文字列になってる！
+
+
+#テスト用コード
+# for i in 1..30
+#     if i % 15 == 0
+#         puts ('FizzBuzz')
+#     elsif i % 3 == 0
+#         puts ('fizz')
+#     elsif i % 5 == 0
+#         puts ('Buzz')        
+#     else
+#         puts (i.to_s)
+#     end
+# end
