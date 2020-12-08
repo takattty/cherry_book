@@ -26,3 +26,13 @@ p o, k # K=Array
 p %w(apple melon orange) # => ["apple", "melon", "orange"] クォーテーションやカンマを入れないで済むので短縮。
 
 p 'ruby'.chars
+
+ka = Array.new(5, 'hey') # 引数での呼び出しなので、全て同じ値でオブジェクトとして存在している。
+ka1 = ka[0]
+ka1.upcase!
+p ka
+
+ki = Array.new(5) { 'hi' } # ブロックが呼ばれる度にしか生成しないから、それぞれが違うオブジェクトとして存在。
+ki1 = ki[0]
+ki1.upcase!
+p ki
