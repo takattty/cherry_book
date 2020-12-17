@@ -28,3 +28,10 @@ p currencies2.values
 
 hey = { korea: 'won', **currencies2}
 p hey # このpのメソッドないでは展開出来ない
+
+
+array1 = [[:ja, "yen"], [:us, "dollar"], [:india, "rupee"]]
+p array1.to_h
+
+array2 = {:ja=>"yen", :us=>"dollar", :india=>"rupee"}
+p array2.to_a
