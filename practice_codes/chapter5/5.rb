@@ -32,6 +32,8 @@ p hey # このpのメソッドないでは展開出来ない
 
 array1 = [[:ja, "yen"], [:us, "dollar"], [:india, "rupee"]]
 p array1.to_h
+p array1.to_s
 
 array2 = {:ja=>"yen", :us=>"dollar", :india=>"rupee"}
 p array2.to_a
+p array2.to_s
