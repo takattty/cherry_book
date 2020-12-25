@@ -32,3 +32,11 @@ if /(?<year>\d+)年(?<mouth>\d+)月(?<day>\d+)日/ =~ birthday
   p "#{year}/#{mouth}/#{day}" # => "1977/7/17"
 end
 #　超便利じゃん。でも左辺と右辺逆だと使えません！
+
+
+# Stringクラスにある正規表現と組み合わせると便利になるメソッド
+# scan String to Array         マッチした文字列を配列に入れて返す。
+# split String to Array        マッチした文字列を区切り文字にして分解し、配列を返す。どこで区切るかを決めて全要素を配列に入れるイメージ。
+# gsub, gsub! String to String マッチした文字列を第二引数の文字列で置き換える。
+
+# \w = [A-Za-za0-9_] 同値。
