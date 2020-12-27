@@ -10,7 +10,7 @@ class GateTest < Minitest::Test
     @mikuni = Gate.new(:mikuni)
   end
 
-  def test_gate
+  def test_umeda_to_juso
     ticket = Ticket.new(150)
     @umeda.enter(ticket)
     assert @juso.exit(ticket)
@@ -22,7 +22,7 @@ class GateTest < Minitest::Test
     refute @mikuni.exit(ticket)
   end
 
-  def test_umeda_to_mikuni_when_fare_is_not_enough
+  def test_umeda_to_mikuni_when_fare_is_enough
     ticket = Ticket.new(190)
     @umeda.enter(ticket)
     assert @mikuni.exit(ticket)
