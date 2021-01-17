@@ -44,3 +44,10 @@ p product.log 'publick?'
 
 p Product.create_products([])
 p Product.log('Hello!')
+
+# 引数で渡したモジュールを含んでいるか
+p Product.include?(Loggable)
+# includeされているモジュールの配列を返す
+p Product.included_modules # => [Kernel]
+# モジュール含むスーパークラスの情報も配列で返す
+p Product.ancestors # => [Product, Object, Kernel, BasicObject]
