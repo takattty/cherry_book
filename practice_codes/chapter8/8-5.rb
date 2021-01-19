@@ -21,3 +21,6 @@ end
 
 product = Product.new
 p product.title
+
+# logメソッドはprivateなので外部からは呼び出せない=module_functionでモジュール関数となったメソッドは、他のクラスにミックスインすると自動的にprivateになるから。
+p product.log 'Hey!!!'
