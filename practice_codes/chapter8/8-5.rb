@@ -1,6 +1,12 @@
+# モジュールの特異メソッドとしてsqrtメソッドを利用する
+Math.sqrt(2)
+
 module Loggable
+
+  PREFIX = '[LOG]'.freeze
+
   def log(text)
-    puts "[LOG] #{text}"
+    puts "#{PREFIX} #{text}"
   end
 
   # logメソッドをミックスインとしても、モジュールの特異メソッドとしても使えるようにする
@@ -19,8 +25,22 @@ class Product
   end
 end
 
+class Calculater
+  include Math
+  
+  def calc_sqrt(num)
+    # ミックスインとしてMathモジュールのsqrtメソッドを使う
+    sqrt(num)
+  end
+end
+
 product = Product.new
 p product.title
 
 # logメソッドはprivateなので外部からは呼び出せない=module_functionでモジュール関数となったメソッドは、他のクラスにミックスインすると自動的にprivateになるから。
 p product.log 'Hey!!!'
+
+p Loggable::PREFIX
+
+calculater = Calculater.new
+p calculater.calc_sqrt(2)
